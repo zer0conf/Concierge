@@ -54,10 +54,10 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x6d205c0dd5ca55002cfaf4464037a91af65a7968172a4ce3c1d952e87fa2246b"));
+    (0, uint256("0x0000015909499ade56347e9b3d1668e13ae817f040b9a711119915deec0d7778"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-	1535176904, // * UNIX timestamp of last checkpoint block
+	1535463355, // * UNIX timestamp of last checkpoint block
     0,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
@@ -124,15 +124,15 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-		genesis.nTime = 1535176904;
+		genesis.nTime = 1535463355;
 		genesis.nBits = 504365040;
-		genesis.nNonce = 1115332;
+		genesis.nNonce = 399062;
 
         hashGenesisBlock = genesis.GetHash();
-		//printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-		//printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
-		assert(hashGenesisBlock == uint256("0x6d205c0dd5ca55002cfaf4464037a91af65a7968172a4ce3c1d952e87fa2246b"));
-		assert(genesis.hashMerkleRoot == uint256("0x437a826ae72cee4af5d4616a36d83ce543176d4eb889752a3eb1783de4219fe5"));
+		printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+		printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
+		assert(hashGenesisBlock == uint256("0x0000015909499ade56347e9b3d1668e13ae817f040b9a711119915deec0d7778"));
+		assert(genesis.hashMerkleRoot == uint256("0x28cdbf388b49935499767ed4a50f1da67d4c92a11a4fbb033ceb836ee8de86d1"));
 
 		vSeeds.push_back(CDNSSeedData("178.128.165.147", "178.128.150.16"));
 		vSeeds.push_back(CDNSSeedData("142.93.170.78", "142.93.170.78"));
@@ -149,7 +149,7 @@ public:
 
         fRequireRPCPassword = true;
         fMiningRequiresPeers = false;		// default true
-        fAllowMinDifficultyBlocks = false;
+        fAllowMinDifficultyBlocks = true;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
         fMineBlocksOnDemand = false;
