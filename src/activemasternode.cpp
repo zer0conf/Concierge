@@ -46,8 +46,8 @@ void CActiveMasternode::ManageStatus()
             return;
         }
 
-		if (pwalletMain->GetBalance() < Params().MasternodeCollateralAmt()*COIN) {
-			LogPrintf("CActiveMasternode::ManageStateInitial -- %s: Wallet balance is < 1,000 CCC\n", GetStateString());
+		if (pwalletMain->GetBalance() < ActiveCollateral()*COIN) {
+			LogPrintf("CActiveMasternode::ManageStateInitial -- %s: Wallet balance is < 2,000 CCC\n", GetStateString());
 		}
 
 
@@ -485,7 +485,7 @@ vector<COutput> CActiveMasternode::SelectCoinsMasternode()
 
     // Filter
     BOOST_FOREACH (const COutput& out, vCoins) {
-        if (out.tx->vout[out.i].nValue == Params().MasternodeCollateralAmt() * COIN) { //exactly
+        if (out.tx->vout[out.i].nValue == ActiveCollateral() * COIN) { //exactly
             filteredCoins.push_back(out);
         }
     }

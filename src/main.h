@@ -200,6 +200,8 @@ bool LoadBlockIndex();
 void UnloadBlockIndex();
 /** See whether the protocol update is enforced for connected nodes */
 int ActiveProtocol();
+/** Return the current amount of the collateral */
+int ActiveCollateral();
 /** Process protocol messages received from a given node */
 bool ProcessMessages(CNode* pfrom);
 /**

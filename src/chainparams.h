@@ -94,7 +94,8 @@ public:
     std::string ObfuscationPoolDummyAddress() const { return strObfuscationPoolDummyAddress; }
     int64_t StartMasternodePayments() const { return nStartMasternodePayments; }
 	//Central Collateral Amount
-	int MasternodeCollateralAmt() const { return nMasternodeCollateralAmt; }
+	int MasternodeCollateralAmtOld() const { return nMasternodeCollateralAmtOld; }
+	int MasternodeCollateralAmtNew() const { return nMasternodeCollateralAmtNew; }
     CBaseChainParams::Network NetworkID() const { return networkID; }
 
 protected:
@@ -105,7 +106,8 @@ protected:
     //! Raw pub key bytes for the broadcast alert signing key.
     std::vector<unsigned char> vAlertPubKey;
     int nDefaultPort;
-	int nMasternodeCollateralAmt;
+	int nMasternodeCollateralAmtOld;
+	int nMasternodeCollateralAmtNew;
     uint256 bnProofOfWorkLimit;
     int nMaxReorganizationDepth;
     int nSubsidyHalvingInterval;

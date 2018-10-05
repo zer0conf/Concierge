@@ -127,3 +127,13 @@ qa/pull-tester/test.*/*
 .vs/ProjectSettings.json
 .vs/Concierge/v15/.suo
 .vs/Convierge/v15/.suo
+.vs/Concierge/v15/ipch/AutoPCH/4cbec0c154945f77/NET.ipch
+.vs/Concierge/v15/ipch/AutoPCH/55e460b144902c30/ACTIVEMASTERNODE.ipch
+.vs/Concierge/v15/ipch/AutoPCH/79f33db494568d16/MASTERNODEMAN.ipch
+.vs/Concierge/v15/ipch/AutoPCH/9ce2e3ee98fbc2df/WALLET.ipch
+.vs/Concierge/v15/ipch/AutoPCH/af852dbb9348c15/SPORK.ipch
+.vs/Concierge/v15/ipch/AutoPCH/ba065a10d6bd01f1/CHAINPARAMS.ipch
+.vs/Concierge/v15/ipch/AutoPCH/bbd3bf7d18d287db/OBFUSCATION.ipch
+.vs/Concierge/v15/ipch/AutoPCH/cfdaf1f531f96d64/MASTERNODE.ipch
+.vs/Concierge/v15/ipch/AutoPCH/f3b0a1a7b2a05143/MAIN.ipch
+.vs/VSWorkspaceState.json

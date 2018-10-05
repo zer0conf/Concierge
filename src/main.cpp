@@ -5427,6 +5427,14 @@ int ActiveProtocol()
     return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
 }
 
+int ActiveCollateral()
+{
+	if (sporkManager.IsSporkActive(SPORK_17_NEW_COLLATERAL_ENFORCEMENT)) {
+		return Params().MasternodeCollateralAmtNew();
+	}
+	return Params().MasternodeCollateralAmtOld();
+}
+
 // requires LOCK(cs_vRecvMsg)
 bool ProcessMessages(CNode* pfrom)
 {

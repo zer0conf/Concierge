@@ -109,7 +109,8 @@ public:
         nLastPOWBlock = 200;
         nMaturity = 10;
         nMasternodeCountDrift = 20;
-		nMasternodeCollateralAmt = 1000; //masternode collateral 10k coins      
+		nMasternodeCollateralAmtOld = 1000; //masternode collateral 10k coins    
+		nMasternodeCollateralAmtNew = 2000;  // New masternode collateral activated by SPORK17
         nModifierUpdateBlock = 1;
         nMaxMoneyOut = 20000000 * COIN;
 
@@ -197,7 +198,8 @@ public:
         nLastPOWBlock = 200;
         nMaturity = 15;
         nMasternodeCountDrift = 4;
-        nMasternodeCollateralLimit = 10000;
+        nMasternodeCollateralLimitOld = 10000;
+		nMasternodeCollateralAmtNew = 2000;  // New masternode collateral activated by SPORK15
         nModifierUpdateBlock = 51197; //approx Mon, 17 Apr 2017 04:00:00 GMT
         nMaxMoneyOut = 43199500 * COIN;
 
