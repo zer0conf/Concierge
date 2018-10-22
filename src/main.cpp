@@ -1622,59 +1622,41 @@ int64_t GetBlockValue(int nHeight)
 
 	if (nHeight == 0) {
 		nSubsidy = 0 * COIN; //Genesis             
-	}
-	else if (nHeight < 50 && nHeight > 0) { //Premine phase 200,000 coins in this phase 4k coins each block for 50 blocks
+	}else if (nHeight < 50 && nHeight > 0) { //Premine phase 200,000 coins in this phase 4k coins each block for 50 blocks
 		nSubsidy = 4000 * COIN;
-	}
-	else if (nHeight < 200 && nHeight > 50) { //PoW stage no reward for it
+	}else if (nHeight < 200 && nHeight > 50) { //PoW stage no reward for it
 		nSubsidy = 0 * COIN;
-	}
-	else if (nHeight < 20000 && nHeight > 201) {
+	}else if (nHeight < 20000 && nHeight > 201) {
 		nSubsidy = 2 * COIN;
-	}
-	else if (nHeight < 40000 && nHeight > 20001) {
+	}else if (nHeight < 40000 && nHeight > 20001) {
 		nSubsidy = 6 * COIN;
-	}
-	else if (nHeight < 60000 && nHeight > 40001) {
+	}else if (nHeight < 60000 && nHeight > 40001) {
 		nSubsidy = 8 * COIN;
-	}
-	else if (nHeight < 80000 && nHeight > 60001) {
+	}else if (nHeight < 80000 && nHeight > 60001) {
 		nSubsidy = 10 * COIN;
-	}
-	else if (nHeight < 100000 && nHeight > 80001) {
+	}else if (nHeight <= 100000 && nHeight > 80000) {
 		nSubsidy = 11 * COIN;
-	}
-	else if (nHeight < 120000 && nHeight > 100001) {
+	}else if (nHeight <= 120000 && nHeight > 100000) {
 		nSubsidy = 12 * COIN;
-	}
-	else if (nHeight < 140000 && nHeight > 120001) {
+	}else if (nHeight <= 140000 && nHeight > 120000) {
 		nSubsidy = 13 * COIN;
-	}
-	else if (nHeight < 160000 && nHeight > 140001) {
+	}else if (nHeight <= 160000 && nHeight > 140000) {
 		nSubsidy = 15 * COIN;
-	}
-	else if (nHeight < 180000 && nHeight > 160001) {
+	}else if (nHeight <= 180000 && nHeight > 160000) {
 		nSubsidy = 16 * COIN;
-	}
-	else if (nHeight < 200000 && nHeight > 180001) {
+	}else if (nHeight <= 200000 && nHeight > 180000) {
 		nSubsidy = 17 * COIN;
-	}
-	else if (nHeight < 220000 && nHeight > 200001) {
+	}else if (nHeight <= 220000 && nHeight > 200000) {
 		nSubsidy = 15 * COIN;
-	}
-	else if (nHeight < 240000 && nHeight > 220001) {
+	}else if (nHeight <= 240000 && nHeight > 220000) {
 		nSubsidy = 14 * COIN;
-	}
-	else if (nHeight < 260000 && nHeight > 240001) {
+	}else if (nHeight <= 260000 && nHeight > 240000) {
 		nSubsidy = 13 * COIN;
-	}
-	else if (nHeight < 280000 && nHeight > 260001) {
+	}else if (nHeight <= 280000 && nHeight > 260000) {
 		nSubsidy = 12 * COIN;
-	}
-	else if (nHeight < 300000 && nHeight > 280001) {
+	}else if (nHeight <= 300000 && nHeight > 280000) {
 		nSubsidy = 11 * COIN;
-	}
-	else if (nHeight < 300001) { //Till max supply 
+	}else if (nHeight <= 300000) { //Till max supply 
 		nSubsidy = 10 * COIN;
 	}
 	int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;

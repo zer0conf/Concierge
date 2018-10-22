@@ -127,3 +127,5 @@ qa/pull-tester/test.*/*
 .vs/ProjectSettings.json
 .vs/Concierge/v15/.suo
 .vs/Convierge/v15/.suo
+.vs/Concierge/v15/ipch/AutoPCH/b3d1263c729891f3/CLIENTVERSION.ipch
+.vs/Concierge/v15/ipch/AutoPCH/f3b0a1a7b2a05143/MAIN.ipch
